@@ -1,3 +1,4 @@
+let currentPurchase=null
 async function initialize(){
   console.log("initializing")
 
@@ -19,6 +20,7 @@ async function initialize(){
         if(item.display>0){
             let newRow = tbodyRef.insertRow();
             let cell = addCell(newRow,item.name)
+            newRow.dataset.name=item.name
             cell.addEventListener("click", toggleDetails);
             
             let span = document.createElement('span')
@@ -62,7 +64,7 @@ async function initialize(){
 
   }
 
-//https://venmo.com/spafv?txn=pay&amp;amount=10&amp;note=water
+
 }
 
 function addCell(row, textOrObject, className){
@@ -96,13 +98,11 @@ function tag(id){
 }
 
 function changeQty(evt){
-  console.log("at change qty", evt)
+    resetPmt()
   let elem=evt.target
   while(elem.tagName !== "TD"){
-    console.log(elem)
     elem=elem.parentNode
   }
-  console.log(elem)
   elem = elem.nextElementSibling
   console.log(evt.target.value)
   if(evt.target.value==0){
@@ -112,14 +112,31 @@ function changeQty(evt){
   }
   
   let orderTotal=0
-  console.log("ordertotal:", typeof orderTotal)
   for(const rowTotal of document.querySelectorAll(".rowTotal")){
     let tot=parseFloat(rowTotal.innerHTML.replace("$",""))
     if(isNaN(tot)){tot=0}
-    console.log(tot)
+    if(tot>0){
+        orderLine(rowTotal, tot)
+        console.log(tot)
+        console.log("tot", typeof tot, tot, isNaN(tot))
+    }
     orderTotal += tot
   }
   tag("total").replaceChildren(money(orderTotal))
+  //currentPurchase.push("Total: " + money(orderTotal))
+  tag("venmo-link").href=`https://venmo.com/spafv?txn=pay&amp;amount=${orderTotal}&amp;note=${encodeURIComponent(currentPurchase.join("\n"))}`
+  console.log(currentPurchase)
+}
+
+function orderLine(rowTotal, lineAmount){
+    let elem=rowTotal
+    while(elem.tagName !== "TR"){
+      elem=elem.parentNode
+    }
+    let qty = elem.querySelector("select").value
+    console.log(qty)
+    currentPurchase.push(qty + " " + elem.dataset.name + ": " +money(lineAmount))
+      
 }
 
 function money(num){
@@ -147,8 +164,21 @@ function showPay(style){
     if(style==="venmo"){
         tag("pay-venmo").style.display="block"
         tag("pay-cash").style.display="none"
+        console.log(tag("total").innerHTML)
+        tag("venmo-link").href="https://venmo.com/spafv?txn=pay&amp;amount=10&amp;note=water"
+
     }else{
         tag("pay-cash").style.display="block"
         tag("pay-venmo").style.display="none"
     }
+}
+
+function openVenmo(){
+
+}
+
+function resetPmt(){
+    tag("pay-cash").style.display="none"
+    tag("pay-venmo").style.display="none"
+    currentPurchase=[]
 }

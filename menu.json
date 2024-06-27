@@ -8,7 +8,7 @@
                 "price":"3.00",
                 "ingredients":["Flour","Rum","Sugar","butter"] ,
                 "photo":"images/frogger.jpg",
-                "display":2
+                "display":1
             },
             {
                 "name":"Gingerbread Cookie",
@@ -46,7 +46,7 @@
                 "price":"7.00",
                 "ingredients":["Flour","water","salt"] ,
                 "photo":"images/loaf.webp",
-                "display":1
+                "display":0
             }
         ]
     }
