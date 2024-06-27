@@ -2,9 +2,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/style.css">
+    <script src="code.js"></script>
+    <title>Bakehouse</title>
 </head>
-<body>
-    bakehouse
+<body onload="initialize()">
+  <div id="content">
+    <div id="title">
+        Bakehouse Order Form
+    </div>
+    <div id="form">
+        <table id="orderform">
+            <tbody>
+            </tbody>
+        </table>
+
+
+        <div id="customer">
+            Name on Order: <br>
+            <input id="cust-name" type="text" style="width:100%">
+        </div>
+    
+        <div id="ordertotal">
+            Order Total: <span id="total">$0</span>
+            </div>
+        </div>
+        <div class="button"  onclick="showPay('venmo')">
+            Pay With Venmo
+        </div>
+
+        <div class="button"   onclick="showPay('cash')">
+            Pay With Cash
+        </div>
+
+
+        <div id="pay-venmo" class="pay-text" style="display: none;">
+            <span class="warning">Don't make the payment <br>until you are at the counter.</span><br><br> When instructed, follow this link to <span class="span-link" onclick="openVenmo()">open your Venmo app</span> and pay.
+        </div>
+        <div id="pay-cash" class="pay-text" style="display: none;">
+            No problem, just have your money ready 
+        </div>
+    
+        <br><br>
+    </div>
 </body>
 </html>

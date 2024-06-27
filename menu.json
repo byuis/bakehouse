@@ -1,0 +1,55 @@
+[
+    { 
+        "category":"Sweets",
+        "items":[
+            {
+                "name":"Joe Frogger",
+                "description":"Uncle joe was an old black who lived in marblehead",
+                "price":"3.00",
+                "ingredients":["Flour","Rum","Sugar","butter"] ,
+                "photo":"images/frogger.jpg",
+                "display":2
+            },
+            {
+                "name":"Gingerbread Cookie",
+                "description":"Christopher Ludvik Was a genius",
+                "price":"2.50",
+                "ingredients":["Flour","ginger","Sugar","butter"] ,
+                "photo":"images/gingerbread.webp",
+                "display":1
+
+            }
+        ]
+    },
+    { 
+        "category":"Sourdough Bread",
+        "items":[
+            {
+                "name":"Plain Sourdough Slice",
+                "description":"A slice of heaven",
+                "price":"1.00",
+                "ingredients":["Flour","water","salt"] ,
+                "photo":"images/slice.webp",
+                "display":1
+            },
+            {
+                "name":"Sourdough Slice with butter",
+                "description":"A slice of heaven with fat,  Mmmmmmm",
+                "price":"1.00",
+                "ingredients":["Flour","water","butter","salt"] ,
+                "photo":"images/slice.webp",
+                "display":1
+            },
+            {
+                "name":"Sourdough Loaf",
+                "description":"A loaf of heaven",
+                "price":"7.00",
+                "ingredients":["Flour","water","salt"] ,
+                "photo":"images/loaf.webp",
+                "display":1
+            }
+        ]
+    }
+
+    
+]
