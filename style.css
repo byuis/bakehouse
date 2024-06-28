@@ -1,22 +1,23 @@
 body{
-    background-color: black;   
+    background-color: beige;  
     font-family: Verdana, Arial, Helvetica, sans-serif;
-     
+    font-size: 1.3rem;
+    padding-bottom: 2rem;
   }
 
   #content{
     margin:auto;
-    margin-top:2rem;
+    margin-top:0;
     width:100%;
-    padding: 0, 1rem, 1rem, 1rem;
+    padding: 0;
     background-color: beige;
-    border: 3px solid darkgray;
+
     text-align: center;
   }
 
   #title{
     margin-top:1rem;
-    padding: 0, 1rem, 1rem, 1rem;
+    padding: 0;
     font-size: 2.5rem;
     display:  inline-block;
     font-weight: bold;
@@ -24,7 +25,7 @@ body{
 
 #form{
     margin:1rem;
-    padding: 0, 1rem, 1rem, 1rem;
+    padding: 0;
     font-size: 2rem;
     font-weight: 100;
     border-collapse: collapse;
@@ -34,7 +35,7 @@ body{
     }
 
 table{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     border-collapse :  collapse  ;
 }
 
@@ -111,3 +112,7 @@ select{
     color:red;
     font-weight: bold;
  }
+
+#founderName{
+    margin-top: 1rem;
+}

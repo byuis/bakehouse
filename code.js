@@ -160,17 +160,21 @@ function toggleDetails(evt){
   
 }
 
-function showPay(style){
-    if(style==="venmo"){
-        tag("pay-venmo").style.display="block"
-        tag("pay-cash").style.display="none"
-        console.log(tag("total").innerHTML)
-        tag("venmo-link").href="https://venmo.com/spafv?txn=pay&amp;amount=10&amp;note=water"
+function pay(style){
 
-    }else{
-        tag("pay-cash").style.display="block"
-        tag("pay-venmo").style.display="none"
-    }
+    window.open("https://venmo.com/spafv?txn=pay&amp;amount=10&amp;note=water");
+
+
+    // if(style==="venmo"){
+    //     tag("pay-venmo").style.display="block"
+    //     tag("pay-cash").style.display="none"
+    //     console.log(tag("total").innerHTML)
+    //     tag("venmo-link").href="https://venmo.com/spafv?txn=pay&amp;amount=10&amp;note=water"
+
+    // }else{
+    //     tag("pay-cash").style.display="block"
+    //     tag("pay-venmo").style.display="none"
+    // }
 }
 
 function openVenmo(){
@@ -201,4 +205,14 @@ async function submitOrder(payload){
 
 }
 
+
+function showPmt(){
+    console.log("i'm changing")
+    const founder = tag("founderName")
+    if(founder.value==='none'){
+        tag("payment").style.display='none'
+    }else{
+        tag("payment").style.display='block'
+    }
+}
 
