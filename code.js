@@ -182,3 +182,23 @@ function resetPmt(){
     tag("pay-venmo").style.display="none"
     currentPurchase=[]
 }
+
+async function submitOrder(payload){
+    const deployment_id = "AKfycby6HvC9XdEJTV_63ve2xulioYXtSkLwZQZiI1frzxk_ZAej7HxugOASq84L70wtHVvVGQ"
+    const gas_end_point="https://script.google.com/macros/s/" + deployment_id + "/exec"
+    
+
+
+    const options = { 
+        method: "POST", 
+        body: JSON.stringify(payload),
+    }
+
+    const reply = await fetch(gas_end_point, options)
+    //The request is made of Google App Script and the response is set to "response"
+    const response = await reply.text()
+    console.log(response)
+
+}
+
+
