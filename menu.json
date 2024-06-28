@@ -18,6 +18,33 @@
                 "photo":"images/gingerbread.webp",
                 "display":1
 
+            },
+            {
+                "name":"Chocolate Macaroon",
+                "description":"Exotic coconut cookie",
+                "price":"2.50",
+                "ingredients":["flour","brown sugar","shortening","honey","eggs","ginger","cinnamon","baking soda","salt","cloves","granulated sugar"] ,
+                "photo":"images/gingerbread.webp",
+                "display":1
+
+            },
+            {
+                "name":"Chocolate Chunk",
+                "description":"You are what you eat",
+                "price":"2.50",
+                "ingredients":["flour","brown sugar","shortening","honey","eggs","ginger","cinnamon","baking soda","salt","cloves","granulated sugar"] ,
+                "photo":"images/gingerbread.webp",
+                "display":1
+
+            },
+            {
+                "name":"Fudge Pecan Cookie",
+                "description":"small chocolate snack",
+                "price":"2.50",
+                "ingredients":["flour","brown sugar","shortening","honey","eggs","ginger","cinnamon","baking soda","salt","cloves","granulated sugar"] ,
+                "photo":"images/gingerbread.webp",
+                "display":1
+
             }
         ]
     },
