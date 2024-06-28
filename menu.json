@@ -32,7 +32,7 @@
                 "name":"Chocolate Chunk",
                 "description":"You are what you eat",
                 "price":"2.50",
-                "ingredients":["flour","brown sugar","shortening","honey","eggs","ginger","cinnamon","baking soda","salt","cloves","granulated sugar"] ,
+                "ingredients":["pending"] ,
                 "photo":"images/gingerbread.webp",
                 "display":1
 
@@ -41,7 +41,16 @@
                 "name":"Fudge Pecan Cookie",
                 "description":"small chocolate snack",
                 "price":"2.50",
-                "ingredients":["flour","brown sugar","shortening","honey","eggs","ginger","cinnamon","baking soda","salt","cloves","granulated sugar"] ,
+                "ingredients":["pending"] ,
+                "photo":"images/gingerbread.webp",
+                "display":1
+
+            },
+            {
+                "name":"Rice Crispus Attucks Treat",
+                "description":"gluten friendly option-not produced in a gluten free facility",
+                "price":"2.50",
+                "ingredients":["marshmallows","crisp rice cereal","butter"] ,
                 "photo":"images/gingerbread.webp",
                 "display":1
 
@@ -49,13 +58,21 @@
         ]
     },
     { 
-        "category":"Sourdough Bread",
+        "category":"Goody Pratt's Sunday Sourdough",
         "items":[
             {
                 "name":"Plain Sourdough Slice",
                 "description":"A slice of heaven",
                 "price":"1.00",
                 "ingredients":["Flour","water","salt"] ,
+                "photo":"images/slice.webp",
+                "display":1
+            },
+            {
+                "name":"Plain Sourdough Slice with molasses",
+                "description":"A slice of heaven with fat,  Mmmmmmm",
+                "price":"1.00",
+                "ingredients":["Flour","water","butter","salt"] ,
                 "photo":"images/slice.webp",
                 "display":1
             },
@@ -68,8 +85,21 @@
                 "display":1
             },
             {
+                "name":"Sourdough Slice with butter and molasses",
+                "description":"A slice of heaven with fat,  Mmmmmmm",
+                "price":"1.00",
+                "ingredients":["Flour","water","butter","salt"] ,
+                "photo":"images/slice.webp",
+                "display":1
+            }
+        ]
+    }    { 
+        "category":"Colonial Sourdough Bread",
+        "items":[
+            
+            {
                 "name":"Sourdough Loaf",
-                "description":"A loaf of heaven",
+                "description":"Fire-baked on-site at the Festival in a replica bakehouse oven, 1 pound loaf. LIMITED AVAILABILITY. ",
                 "price":"7.00",
                 "ingredients":["Flour","water","salt"] ,
                 "photo":"images/loaf.webp",
