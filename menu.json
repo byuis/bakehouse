@@ -7,7 +7,7 @@
                 "description":"Uncle joe was an old black who lived in marblehead",
                 "price":"3.00",
                 "ingredients":["flour","molasses","brown sugar","butter","water","rum extract","ginger","salt","baking soda","nutmeg","cloves","allspice"],
-                "photo":"images/frogger.jpg",
+                "photo":"images/frogger.jpg"
                 "display":1
             },
             {
@@ -25,6 +25,7 @@
                 "price":"1.00",
                 "ingredients":["apple sauce","whole wheat flour","brown sugar","eggs","vanilla","baking soda","salt","cinnamon"] ,
                 "photo":"images/applesauce.jpg",
+                "imgWidth":20,
                 "display":1
 
             },
