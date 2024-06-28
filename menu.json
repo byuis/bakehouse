@@ -6,7 +6,7 @@
                 "name":"Joe Frogger",
                 "description":"Uncle joe was an old black who lived in marblehead",
                 "price":"3.00",
-                "ingredients":["flour","brown sugar","shortening","honey","eggs","ginger","cinnamon","baking soda","salt","cloves","granulated sugar"],
+                "ingredients":["flour","molasses","brown sugar","butter","water","rum extract","ginger","salt","baking soda","nutmeg","cloves","allspice"],
                 "photo":"images/frogger.jpg",
                 "display":1
             },
@@ -14,7 +14,7 @@
                 "name":"Gingerbread Cookie",
                 "description":"Christopher Ludvik Was a genius",
                 "price":"2.50",
-                "ingredients":["Flour","ginger","Sugar","butter"] ,
+                "ingredients":["flour","brown sugar","shortening","honey","eggs","ginger","cinnamon","baking soda","salt","cloves","granulated sugar"] ,
                 "photo":"images/gingerbread.webp",
                 "display":1
 
