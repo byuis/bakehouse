@@ -95,12 +95,12 @@
         ]
     },
     { 
-        "category":"Limited Availability",
+        "category":"Colonial Sourdough",
         "items":[
             
             {
                 "name":"Sourdough Loaf",
-                "description":"Fire-baked on-site at the Festival in a replica colonial oven. LIMITED AVAILABILITY.",
+                "description":"tastes good",
                 "price":"7.00",
                 "ingredients":["Flour","water","salt"] ,
                 "photo":"images/loaf.webp",
