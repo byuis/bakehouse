@@ -4,7 +4,7 @@
         "items":[
             {
                 "name":"Joe Frogger",
-                "description":"Uncle joe was an old black who lived in marblehead",
+                "description":"A Joe Frogger is a molasses ginger cookie that dates back to Colonial times.",
                 "price":"3.00",
                 "ingredients":["flour","molasses","brown sugar","butter","water","rum extract","ginger","salt","baking soda","nutmeg","cloves","allspice"],
                 "photo":"images/frogger.jpg",
@@ -12,7 +12,7 @@
             },
             {
                 "name":"Gingerbread Cookie",
-                "description":"Christopher Ludvik Was a genius",
+                "description":"German gingerbread is traditionally made with honey, not molasses, allowing the ginger flavor to take center stage.",
                 "price":"2.50",
                 "ingredients":["flour","brown sugar","shortening","honey","eggs","ginger","cinnamon","baking soda","salt","cloves","granulated sugar"] ,
                 "photo":"images/gingerbread.webp",
@@ -24,7 +24,7 @@
                 "price":"1.00",
                 "ingredients":["apple sauce","whole wheat flour","brown sugar","eggs","vanilla","baking soda","salt","cinnamon"] ,
                 "photo":"images/applesauce.jpg",
-                "imgWidth":20,
+                "imgWidth":200,
                 "display":1
 
             },
@@ -34,6 +34,7 @@
                 "price":"2.00",
                 "ingredients":["unbleached wheat flour","sugar","coconut","milk chocolate chunks","high fructose corn syrup","palm oil","eggs","bleached wheat flour","molasses","cocoa","emulsifier","baking soda","salt"] ,
                 "photo":"images/macaroons.jpg",
+                "imgWidth":200,
                 "display":1
 
             },
@@ -43,6 +44,7 @@
                 "price":"2.00",
                 "ingredients":["enriched flour","semi-sweet chocolate chunks","sugar","margarine","butter","palm oil","high fructose corn syrup","water","molasses","whole egg","dextrose","nonfat milk","salt","emulsifier","baking soda","natural and artificial flavors"] ,
                 "photo":"images/chocChunk.webp",
+                "imgWidth":200,
                 "display":1
 
             },
@@ -52,7 +54,8 @@
                 "price":"2.00",
                 "ingredients":["enriched flour","sugar","palm oil","semi-sweet chocolate chips","high fructose corn syrup","cocoa","whole egg","pecans","enriched bleached flour","molasses","salt","baking soda","water","whey"] ,
                 "photo":"images/fudge pecan.jpg",
-                "display":1
+                "imgWidth":200,
+                "display":1 
 
             },
             {
@@ -61,44 +64,50 @@
                 "price":"2.00",
                 "ingredients":["marshmallows","crisp rice cereal","butter"] ,
                 "photo":"images/rice.jpg",
+                "imgWidth":200,
                 "display":1
 
             }
         ]
     },
     { 
-        "category":"Goody Pratt's Sunday Sourdough",
+        "category":"Goody Pratt's Sunday Sourdough, sold by the slice",
         "items":[
+            
             {
-                "name":"Plain Sourdough Slice",
-                "description":"A slice of heaven",
+                "name":"Plain",
+                "description":"Softer and lighter than our Colonial sourdough",
                 "price":"1.00",
-                "ingredients":["Flour","water","salt"] ,
-                "photo":"images/slice.webp",
+                "ingredients":["Flour","water","honey","olive oil","salt"] ,
+                "photo":"images/slices.jpg",
+                "imgWidth":200,
                 "display":1
             },
             {
-                "name":"Plain Sourdough Slice with molasses",
-                "description":"A slice of heaven with fat,  Mmmmmmm",
+                "name":"With molasses",
+                "description":"Imagine this picture with molasses",
                 "price":"1.00",
-                "ingredients":["Flour","water","butter","salt"] ,
-                "photo":"images/slice.webp",
+                "ingredients":["Flour","water","honey","olive oil","salt"] ,
+                "photo":"images/slices.jpg",
+                "imgWidth":200,
                 "display":1
             },
             {
-                "name":"Sourdough Slice with butter",
-                "description":"A slice of heaven with fat,  Mmmmmmm",
+                "name":"With butter",
+                "description":"Imagine this picture with butter",
                 "price":"1.00",
-                "ingredients":["Flour","water","butter","salt"] ,
-                "photo":"images/slice.webp",
+                "ingredients":["Flour","water","honey","olive oil","salt"] ,
+                "photo":"images/slices.jpg",
+                "imgWidth":200,
                 "display":1
             },
             {
-                "name":"Sourdough Slice with butter and molasses",
-                "description":"A slice of heaven with fat,  Mmmmmmm",
+                "name":"With butter and molasses",
+                "description":"Imagine this picture with butter and molasses",
                 "price":"1.00",
-                "ingredients":["Flour","water","butter","salt"] ,
-                "photo":"images/slice.webp",
+                "ingredients":["water","flour","honey","olive oil","salt"] ,
+                "photo":"images/slices.jpg",
+                "imgWidth":200,
                 "display":1
             }
         ]
@@ -109,7 +118,7 @@
             
             {
                 "name":"Sourdough Loaf",
-                "description":"tastes good",
+                "description":"Authentic and hearty",
                 "price":"7.00",
                 "ingredients":["Flour","water","salt"] ,
                 "photo":"images/loaf.webp",
@@ -123,10 +132,11 @@
             
             {
                 "name":"Lemonade",
-                "description":"tastes good",
+                "description":"Sweet and tangy",
                 "price":"1.00",
                 "ingredients":["water","sugar","lemon juice"] ,
-                "photo":"images/loaf.webp",
+                "photo":"images/lemonade.png",
+                "imgWidth":200,
                 "display":1
             },
       {
@@ -134,7 +144,8 @@
                 "description":"tart and refreshing!",
                 "price":"1.00",
                 "ingredients":["water","sugar","lime juice"] ,
-                "photo":"images/loaf.webp",
+                "photo":"images/limeade.png",
+                "imgWidth":200,
                 "display":1
             } 
         ]
