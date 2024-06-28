@@ -46,6 +46,9 @@ async function initialize(){
             newRow.style.display="none"
             const img = document.createElement("img");
             img.src = item.photo;
+            if(item.imgWidth){
+              img.width=item.imgWidth
+            }
             cell.appendChild(img);
             cell.style.backgroundColor="white"
             cell.style.textAlign="left"
