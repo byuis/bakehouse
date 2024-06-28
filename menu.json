@@ -32,7 +32,7 @@
                 "name":"Chocolate Chunk",
                 "description":"You are what you eat",
                 "price":"2.50",
-                "ingredients":["pending"] ,
+                "ingredients":["enriched flour","semi-sweet chocolate chunks","sugar","margarine","butter","palm oil","high fructose corn syrup","water","molasses","whole egg","dextrose","nonfat milk","salt","emulsifier","baking soda","natural and artificial flavors"] ,
                 "photo":"images/gingerbread.webp",
                 "display":1
 
@@ -41,7 +41,7 @@
                 "name":"Fudge Pecan Cookie",
                 "description":"small chocolate snack",
                 "price":"2.50",
-                "ingredients":["pending"] ,
+                "ingredients":["enriched flour","sugar","palm oil","semi-sweet chocolate chips","high fructose corn syrup","cocoa","whole egg","pecans","enriched bleached flour","molasses","salt","baking soda","water","whey"] ,
                 "photo":"images/gingerbread.webp",
                 "display":1
 
@@ -106,6 +106,28 @@
                 "photo":"images/loaf.webp",
                 "display":1
             }
+        ]
+    },
+    { 
+        "category":"Cold Drinks",
+        "items":[
+            
+            {
+                "name":"Lemonade",
+                "description":"tastes good",
+                "price":"1.00",
+                "ingredients":["water","sugar","lemon juice"] ,
+                "photo":"images/loaf.webp",
+                "display":1
+            },
+      {
+                "name":"Limeade",
+                "description":"tart and refreshing!",
+                "price":"1.00",
+                "ingredients":["water","sugar","lime juice"] ,
+                "photo":"images/loaf.webp",
+                "display":1
+            } 
         ]
     }
 
