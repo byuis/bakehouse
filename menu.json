@@ -104,7 +104,7 @@
                 "price":"7.00",
                 "ingredients":["Flour","water","salt"] ,
                 "photo":"images/loaf.webp",
-                "display":0
+                "display":1
             }
         ]
     }
