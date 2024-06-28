@@ -30,7 +30,8 @@ async function initialize(){
             addCell(newRow,"$" + item.price)
 
             if(item.display===1){
-                addCell(newRow,qtyList())
+                cell = addCell(newRow,qtyList())
+                cell.className = "qty"
                 cell = addCell(newRow,null, "rowTotal")
                 cell.dataset.price=item.price
             }else if(item.display===2){
@@ -123,8 +124,6 @@ function changeQty(evt){
     orderTotal += tot
   }
   tag("total").replaceChildren(money(orderTotal))
-  //currentPurchase.push("Total: " + money(orderTotal))
-  tag("venmo-link").href=`https://venmo.com/spafv?txn=pay&amp;amount=${orderTotal}&amp;note=${encodeURIComponent(currentPurchase.join("\n"))}`
   console.log(currentPurchase)
 }
 
@@ -162,24 +161,40 @@ function toggleDetails(evt){
 
 function pay(style){
 
-    window.open("https://venmo.com/spafv?txn=pay&amp;amount=10&amp;note=water");
+
+    if(!currentPurchase){return}
+    tag("founder").style.display="none"
+    tag("payment").style.display="none"
+    tag("reset").style.display="block"
 
 
-    // if(style==="venmo"){
-    //     tag("pay-venmo").style.display="block"
-    //     tag("pay-cash").style.display="none"
-    //     console.log(tag("total").innerHTML)
-    //     tag("venmo-link").href="https://venmo.com/spafv?txn=pay&amp;amount=10&amp;note=water"
+    for(const cell of document.querySelectorAll(".qty")){
+        console.log("cell",cell)
+        const val = cell.firstElementChild.value
+        if(val===0){
+            cell.replaceChildren()
+        }else{
+            cell.replaceChildren(val)
+        }
+    }
 
-    // }else{
-    //     tag("pay-cash").style.display="block"
-    //     tag("pay-venmo").style.display="none"
-    // }
+    const orderText=currentPurchase.join("\n")
+    const orderTotal = parseFloat(tag("total").innerHTML.replace("$",""))
+
+    if(style==='venmo'){
+        window.open("https://venmo.com/spafv?txn=pay&amp;amount="+orderTotal+"&amp;note=" + encodeURIComponent(orderText));
+    }
+    const payload={
+        customer:tag("founderName").value,
+        order:orderText,
+        total:orderTotal
+    }
+    console.log(payload)
+    submitOrder(payload)
+
 }
 
-function openVenmo(){
 
-}
 
 function resetPmt(){
     tag("pay-cash").style.display="none"
@@ -188,7 +203,7 @@ function resetPmt(){
 }
 
 async function submitOrder(payload){
-    const deployment_id = "AKfycby6HvC9XdEJTV_63ve2xulioYXtSkLwZQZiI1frzxk_ZAej7HxugOASq84L70wtHVvVGQ"
+    const deployment_id = "AKfycbxJRt15UzYPrZNc-Md_btlJ0v5IloyeR4T4gyyvskeSz5XNP-BrhXzRx8F1fOx3txXJ3w"
     const gas_end_point="https://script.google.com/macros/s/" + deployment_id + "/exec"
     
 
