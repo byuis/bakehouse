@@ -20,38 +20,47 @@
 
             },
             {
+                "name":"Providence Applesauce Cake",
+                "description":"a deliciously moist and hearty snack",
+                "price":"1.00",
+                "ingredients":["apple sauce","whole wheat flour","brown sugar","eggs","vanilla","baking soda","salt","cinnamon"] ,
+                "photo":"images/applesauce.jpg",
+                "display":1
+
+            },
+            {
                 "name":"Chocolate Macaroon",
                 "description":"Exotic coconut cookie",
-                "price":"2.50",
+                "price":"2.00",
                 "ingredients":["unbleached wheat flour","sugar","coconut","milk chocolate chunks","high fructose corn syrup","palm oil","eggs","bleached wheat flour","molasses","cocoa","emulsifier","baking soda","salt"] ,
-                "photo":"images/gingerbread.webp",
+                "photo":"images/macaroons.jpg",
                 "display":1
 
             },
             {
                 "name":"Chocolate Chunk",
                 "description":"You are what you eat",
-                "price":"2.50",
+                "price":"2.00",
                 "ingredients":["enriched flour","semi-sweet chocolate chunks","sugar","margarine","butter","palm oil","high fructose corn syrup","water","molasses","whole egg","dextrose","nonfat milk","salt","emulsifier","baking soda","natural and artificial flavors"] ,
-                "photo":"images/gingerbread.webp",
+                "photo":"images/chocChunk.webp",
                 "display":1
 
             },
             {
                 "name":"Fudge Pecan Cookie",
                 "description":"small chocolate snack",
-                "price":"2.50",
+                "price":"2.00",
                 "ingredients":["enriched flour","sugar","palm oil","semi-sweet chocolate chips","high fructose corn syrup","cocoa","whole egg","pecans","enriched bleached flour","molasses","salt","baking soda","water","whey"] ,
-                "photo":"images/gingerbread.webp",
+                "photo":"images/fudge pecan.jpg",
                 "display":1
 
             },
             {
                 "name":"Rice Crispus Attucks Treat",
                 "description":"gluten friendly option-not produced in a gluten free facility",
-                "price":"2.50",
+                "price":"2.00",
                 "ingredients":["marshmallows","crisp rice cereal","butter"] ,
-                "photo":"images/gingerbread.webp",
+                "photo":"images/rice.jpg",
                 "display":1
 
             }
