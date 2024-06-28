@@ -6,7 +6,7 @@
                 "name":"Joe Frogger",
                 "description":"Uncle joe was an old black who lived in marblehead",
                 "price":"3.00",
-                "ingredients":["Flour","Rum","Sugar","butter"] ,
+                "ingredients":[“flour”, “molasses”, “brown sugar”, “butter”, “water”, “rum extract”, “ginger”, “salt”, “baking soda”, “nutmeg”, “cloves”, “allspice”] ,
                 "photo":"images/frogger.jpg",
                 "display":1
             },
