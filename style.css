@@ -21,6 +21,13 @@ body{
     font-size: 2.5rem;
     display:  inline-block;
     font-weight: bold;
+    } 
+#subtitle{
+    margin-top:1rem;
+    padding: 0;
+    font-size: 2rem;
+    display:  inline-block;
+    font-weight: bold;
     }
 
 #form{
