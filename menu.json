@@ -4,18 +4,20 @@
         "items":[
             {
                 "name":"Joe Frogger",
-                "description":"A Joe Frogger is a molasses ginger cookie that dates back to Colonial times.",
-                "price":"3.00",
+                "description":"A Joe Frogger is a chewy molasses ginger cookie that dates back to Colonial times. Some say the name was given because the cookies are the size of the lilypads frogs can sit on.",
+                "price":"4.00",
                 "ingredients":["flour","molasses","brown sugar","butter","water","rum extract","ginger","salt","baking soda","nutmeg","cloves","allspice"],
                 "photo":"images/frogger.jpg",
+                "imgWidth":200,
                 "display":1
             },
             {
                 "name":"Gingerbread Cookie",
                 "description":"German gingerbread is traditionally made with honey, not molasses, allowing the ginger flavor to take center stage.",
-                "price":"2.50",
+                "price":"3.00",
                 "ingredients":["flour","brown sugar","shortening","honey","eggs","ginger","cinnamon","baking soda","salt","cloves","granulated sugar"] ,
-                "photo":"images/gingerbread.webp",
+                "photo":"images/ginger2.webp",
+                "imgWidth":200,
                 "display":1
             },
             {
@@ -29,8 +31,8 @@
 
             },
             {
-                "name":"Chocolate Macaroon",
-                "description":"Exotic coconut cookie",
+                "name":"The Lord Dunmore: Chocolate Macaroon",
+                "description":"An exotic coconut treat, both chewy and chocolatey, may have been a favorite of Lord Dunmore after he became Governor of the Bahamas.",
                 "price":"2.00",
                 "ingredients":["unbleached wheat flour","sugar","coconut","milk chocolate chunks","high fructose corn syrup","palm oil","eggs","bleached wheat flour","molasses","cocoa","emulsifier","baking soda","salt"] ,
                 "photo":"images/macaroons.jpg",
@@ -39,8 +41,8 @@
 
             },
             {
-                "name":"Chocolate Chunk",
-                "description":"You are what you eat",
+                "name":"The Patrick Henry: Chocolate Chunk Cookie",
+                "description":"Give me liberty or give me death by Chocolate! An extra large, chewy, crispy favorite!",
                 "price":"2.00",
                 "ingredients":["enriched flour","semi-sweet chocolate chunks","sugar","margarine","butter","palm oil","high fructose corn syrup","water","molasses","whole egg","dextrose","nonfat milk","salt","emulsifier","baking soda","natural and artificial flavors"] ,
                 "photo":"images/chocChunk.webp",
@@ -49,9 +51,9 @@
 
             },
             {
-                "name":"Fudge Pecan Cookie",
-                "description":"small chocolate snack",
-                "price":"2.00",
+                "name":"The John Adams: Fudge Pecan Cookie",
+                "description":"Like it's namesake, this cookie is small, yet robust!",
+                "price":"1.00",
                 "ingredients":["enriched flour","sugar","palm oil","semi-sweet chocolate chips","high fructose corn syrup","cocoa","whole egg","pecans","enriched bleached flour","molasses","salt","baking soda","water","whey"] ,
                 "photo":"images/fudge pecan.jpg",
                 "imgWidth":200,
@@ -59,10 +61,20 @@
 
             },
             {
-                "name":"Rice Crispus Attucks Treat",
-                "description":"gluten friendly option-not produced in a gluten free facility",
+                "name":"Crispus Attucks Rice Crispy Bar",
+                "description":"gluten friendly option-NOT produced in a gluten-free facility",
                 "price":"2.00",
                 "ingredients":["marshmallows","crisp rice cereal","butter"] ,
+                "photo":"images/rice.jpg",
+                "imgWidth":200,
+                "display":1
+
+            },
+            {
+                "name":"cooki-E pluribus unum",
+                "description":"Having trouble deciding? Have one of everything on the Sweets menu. A great way to try each of our sweet treats",
+                "price":"13.00",
+                "ingredients":["see each cookie's description"] ,
                 "photo":"images/rice.jpg",
                 "imgWidth":200,
                 "display":1
@@ -117,8 +129,8 @@
         "items":[
             
             {
-                "name":"Sourdough Loaf",
-                "description":"Authentic and hearty",
+                "name":"Whole Loaf",
+                "description":"Authentic recipe, baked on-site in a wood-fired, brick oven. Limited Availability",
                 "price":"7.00",
                 "ingredients":["Flour","water","salt"] ,
                 "photo":"images/loaf.webp",
