@@ -14,7 +14,7 @@
             {
                 "name":"*No Empty Bellies* Gingerbread Cookie",
                 "description":"This gingerbread cookie is a delicious, spiced treat combining ginger, cinnamon, and cloves with the rich, floral sweetness of honey. This variation on the classic gingerbread cookie offers a softer texture and a deeper, more complex flavor profile, making it a festival favorite.",
-                "price":"3.00",
+                "price":"4.00",
                 "ingredients":["flour","brown sugar","shortening","honey","eggs","ginger","cinnamon","baking soda","salt","cloves","granulated sugar"] ,
                 "photo":"images/gingerbread.webp",
                 "imgWidth":200,
@@ -44,7 +44,7 @@
             {
                 "name":"The John Adams: *I will not budge* Pecan Fudge Cookie",
                 "description":"A rich and indulgent treat that combines the deep, velvety flavors of chocolate fudge with the buttery crunch of toasted pecans. Each bite offers a delightful contrast between the soft, chewy cookie base and the nutty, slightly caramelized pecans, creating a decadent and satisfying dessert experience.",
-                "price":"1.00",
+                "price":"2.00",
                 "ingredients":["enriched flour","sugar","palm oil","semi-sweet chocolate chips","high fructose corn syrup","cocoa","whole egg","pecans","enriched bleached flour","molasses","salt","baking soda","water","whey"] ,
                 "photo":"images/pecanfudge.png",
                 "imgWidth":200,
@@ -131,9 +131,9 @@
         "items":[
             
             {
-                "name":"Apprentice Loaf",
+                "name":"Whole Loaf",
                 "description":"An authentically baked sourdough loaf, using a colonial-era recipe; a rustic bread that captures the essence of early American baking traditions. Crafted with a naturally fermented starter, stone-ground whole grain flour, and water, this loaf is baked in a wood-fired brick oven, on-site. The result is a dense, tangy interior with a robust, chewy texture, and a thick, crackling crust, reminiscent of the hearty breads that sustained settlers in the colonial period. Limited Availability",
-                "price":"7.00",
+                "price":"8.00",
                 "ingredients":["Flour","water","salt"] ,
                 "photo":"images/loaf.webp",
                 "display":1
