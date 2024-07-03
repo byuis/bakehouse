@@ -4,25 +4,66 @@
         "items":[
             {
                 "name":"Joe Frogger",
-                "description":"A Joe Frogger is a chewy molasses ginger cookie that dates back to Colonial times. Some say the name was given because the cookies are the size of the lilypads frogs can sit on.",
+                "description":"A Joe Frogger cookie is a traditional New England molasses cookie that is spiced with ginger, cloves, and allspice, and sweetened with a touch of rum flavoring. These large, chewy cookies originated in the 18th century and are named after Joseph Brown, a freed African American who popularized them in Marblehead, Massachusetts.",
                 "price":"4.00",
                 "ingredients":["flour","molasses","brown sugar","butter","water","rum extract","ginger","salt","baking soda","nutmeg","cloves","allspice"],
-                "photo":"images/frogger.jpg",
+                "photo":"images/joefrogger.png",
                 "imgWidth":200,
                 "display":1
             },
             {
-                "name":"Gingerbread Cookie",
-                "description":"German gingerbread is traditionally made with honey, not molasses, allowing the ginger flavor to take center stage.",
+                "name":"*No Empty Bellies* Gingerbread Cookie",
+                "description":"This gingerbread cookie is a delicious, spiced treat combining ginger, cinnamon, and cloves with the rich, floral sweetness of honey. This variation on the classic gingerbread cookie offers a softer texture and a deeper, more complex flavor profile, making it a festival favorite.",
                 "price":"3.00",
                 "ingredients":["flour","brown sugar","shortening","honey","eggs","ginger","cinnamon","baking soda","salt","cloves","granulated sugar"] ,
-                "photo":"images/ginger2.webp",
+                "photo":"images/gingerbread.webp",
                 "imgWidth":200,
                 "display":1
+            
+            },
+            {
+                "name":"The Patrick Henry: *Give me liberty or give me death by Chocolate* Chunk Cookie",
+                "description":"An extra large, chewy, crispy favorite!",
+                "price":"3.00",
+                "ingredients":["enriched flour","semi-sweet chocolate chunks","sugar","margarine","butter","palm oil","high fructose corn syrup","water","molasses","whole egg","dextrose","nonfat milk","salt","emulsifier","baking soda","natural and artificial flavors"] ,
+                "photo":"images/chocChunk.png",
+                "imgWidth":200,
+                "display":1
+
+            },
+            {
+                "name":"The Lord Dunmore: *Make me Swoon* Chocolate Macaroon",
+                "description":"An exotic coconut treat, both chewy and chocolatey.",
+                "price":"2.00",
+                "ingredients":["unbleached wheat flour","sugar","coconut","milk chocolate chunks","high fructose corn syrup","palm oil","eggs","bleached wheat flour","molasses","cocoa","emulsifier","baking soda","salt"] ,
+                "photo":"images/Chocmacaroon.png",
+                "imgWidth":200,
+                "display":1
+
+            },
+            {
+                "name":"The John Adams: *I will not budge* Pecan Fudge Cookie",
+                "description":"Like it's namesake, this cookie is small, yet robust!",
+                "price":"1.00",
+                "ingredients":["enriched flour","sugar","palm oil","semi-sweet chocolate chips","high fructose corn syrup","cocoa","whole egg","pecans","enriched bleached flour","molasses","salt","baking soda","water","whey"] ,
+                "photo":"images/pecanfudge.png",
+                "imgWidth":200,
+                "display":1 
+
+            },
+            {
+                "name":"Variety Pack: The Cooki-E pluribus unum",
+                "description":"One of each of the above cookies. Save $2",
+                "price":"10.00",
+                "ingredients":["see each cookie's description"] ,
+                "photo":"images/variety.webp",
+                "imgWidth":200,
+                "display":0
+
             },
             {
                 "name":"Providence Applesauce Cake",
-                "description":"a deliciously moist and hearty snack",
+                "description":"Made with whole wheat flour and real applesauce",
                 "price":"1.00",
                 "ingredients":["apple sauce","whole wheat flour","brown sugar","eggs","vanilla","baking soda","salt","cinnamon"] ,
                 "photo":"images/applesauce.jpg",
@@ -31,55 +72,16 @@
 
             },
             {
-                "name":"The Lord Dunmore: Chocolate Macaroon",
-                "description":"An exotic coconut treat, both chewy and chocolatey, may have been a favorite of Lord Dunmore after he became Governor of the Bahamas.",
-                "price":"2.00",
-                "ingredients":["unbleached wheat flour","sugar","coconut","milk chocolate chunks","high fructose corn syrup","palm oil","eggs","bleached wheat flour","molasses","cocoa","emulsifier","baking soda","salt"] ,
-                "photo":"images/macaroons.jpg",
-                "imgWidth":200,
-                "display":1
-
-            },
-            {
-                "name":"The Patrick Henry: Chocolate Chunk Cookie",
-                "description":"Give me liberty or give me death by Chocolate! An extra large, chewy, crispy favorite!",
-                "price":"2.00",
-                "ingredients":["enriched flour","semi-sweet chocolate chunks","sugar","margarine","butter","palm oil","high fructose corn syrup","water","molasses","whole egg","dextrose","nonfat milk","salt","emulsifier","baking soda","natural and artificial flavors"] ,
-                "photo":"images/chocChunk.webp",
-                "imgWidth":200,
-                "display":1
-
-            },
-            {
-                "name":"The John Adams: Fudge Pecan Cookie",
-                "description":"Like it's namesake, this cookie is small, yet robust!",
+                "name":"The Crispus Attucks Rice Crispy Bar",
+                "description":"A childhood favorite and gluten friendly option-NOT produced in a gluten-free facility",
                 "price":"1.00",
-                "ingredients":["enriched flour","sugar","palm oil","semi-sweet chocolate chips","high fructose corn syrup","cocoa","whole egg","pecans","enriched bleached flour","molasses","salt","baking soda","water","whey"] ,
-                "photo":"images/fudge pecan.jpg",
-                "imgWidth":200,
-                "display":1 
-
-            },
-            {
-                "name":"Crispus Attucks Rice Crispy Bar",
-                "description":"gluten friendly option-NOT produced in a gluten-free facility",
-                "price":"2.00",
                 "ingredients":["marshmallows","crisp rice cereal","butter"] ,
                 "photo":"images/rice.jpg",
                 "imgWidth":200,
                 "display":1
 
-            },
-            {
-                "name":"cooki-E pluribus unum",
-                "description":"Having trouble deciding? Have one of everything on the Sweets menu. A great way to try each of our sweet treats",
-                "price":"13.00",
-                "ingredients":["see each cookie's description"] ,
-                "photo":"images/rice.jpg",
-                "imgWidth":200,
-                "display":1
-
             }
+           
         ]
     },
     { 
@@ -87,8 +89,8 @@
         "items":[
             
             {
-                "name":"Plain",
-                "description":"Softer and lighter than our Colonial sourdough",
+                "name":"a plain slice",
+                "description":"Served with no toppings",
                 "price":"1.00",
                 "ingredients":["Flour","water","honey","olive oil","salt"] ,
                 "photo":"images/slices.jpg",
@@ -96,8 +98,8 @@
                 "display":1
             },
             {
-                "name":"With molasses",
-                "description":"Imagine this picture with molasses",
+                "name":"a slice With molasses",
+                "description":"Served with a generous drizzle of molasses",
                 "price":"1.00",
                 "ingredients":["Flour","water","honey","olive oil","salt"] ,
                 "photo":"images/slices.jpg",
@@ -105,8 +107,8 @@
                 "display":1
             },
             {
-                "name":"With butter",
-                "description":"Imagine this picture with butter",
+                "name":"a slice with butter",
+                "description":"Single slice spread with real butterr",
                 "price":"1.00",
                 "ingredients":["Flour","water","honey","olive oil","salt"] ,
                 "photo":"images/slices.jpg",
@@ -114,8 +116,8 @@
                 "display":1
             },
             {
-                "name":"With butter and molasses",
-                "description":"Imagine this picture with butter and molasses",
+                "name":"a slice with butter and molasses",
+                "description":"Single slice with both butter and molasses",
                 "price":"1.00",
                 "ingredients":["water","flour","honey","olive oil","salt"] ,
                 "photo":"images/slices.jpg",
@@ -129,12 +131,12 @@
         "items":[
             
             {
-                "name":"Whole Loaf",
-                "description":"Authentic recipe, baked on-site in a wood-fired, brick oven. Limited Availability",
+                "name":"Apprentice Loaf",
+                "description":"Authentic recipe, baked on-site in a wood-fired, brick oven by the baker's apprentice. Limited Availability",
                 "price":"7.00",
                 "ingredients":["Flour","water","salt"] ,
                 "photo":"images/loaf.webp",
-                "display":2
+                "display":1
             }
         ]
     },
@@ -153,7 +155,7 @@
             },
       {
                 "name":"Limeade",
-                "description":"tart and refreshing!",
+                "description":"Tart and refreshing!",
                 "price":"1.00",
                 "ingredients":["water","sugar","lime juice"] ,
                 "photo":"images/limeade.png",
