@@ -23,7 +23,7 @@
             },
             {
                 "name":"The Patrick Henry: *Give me liberty or give me death by Chocolate* Chunk Cookie",
-                "description":"An extra large, chewy, crispy favorite!",
+                "description":"A classic and indulgent treat, characterized by its soft and chewy texture with a slightly crisp edge. Generously studded with rich, melty chunks of high-quality chocolate, each bite offers a delightful balance of buttery sweetness and deep cocoa flavor, making it a favorite comfort food for chocolate lovers of all ages.",
                 "price":"3.00",
                 "ingredients":["enriched flour","semi-sweet chocolate chunks","sugar","margarine","butter","palm oil","high fructose corn syrup","water","molasses","whole egg","dextrose","nonfat milk","salt","emulsifier","baking soda","natural and artificial flavors"] ,
                 "photo":"images/chocChunk.png",
@@ -33,7 +33,7 @@
             },
             {
                 "name":"The Lord Dunmore: *Make me Swoon* Chocolate Macaroon",
-                "description":"An exotic coconut treat, both chewy and chocolatey.",
+                "description":"A decadent treat featuring a moist, tender texture from shredded coconut combined with rich, melted chocolate. This delightful confection balances the tropical sweetness of coconut with the deep, satisfying flavor of chocolate, creating a perfect bite-sized indulgence that's crispy on the outside and irresistibly chewy on the inside.",
                 "price":"2.00",
                 "ingredients":["unbleached wheat flour","sugar","coconut","milk chocolate chunks","high fructose corn syrup","palm oil","eggs","bleached wheat flour","molasses","cocoa","emulsifier","baking soda","salt"] ,
                 "photo":"images/Chocmacaroon.png",
@@ -43,7 +43,7 @@
             },
             {
                 "name":"The John Adams: *I will not budge* Pecan Fudge Cookie",
-                "description":"Like it's namesake, this cookie is small, yet robust!",
+                "description":"A rich and indulgent treat that combines the deep, velvety flavors of chocolate fudge with the buttery crunch of toasted pecans. Each bite offers a delightful contrast between the soft, chewy cookie base and the nutty, slightly caramelized pecans, creating a decadent and satisfying dessert experience.",
                 "price":"1.00",
                 "ingredients":["enriched flour","sugar","palm oil","semi-sweet chocolate chips","high fructose corn syrup","cocoa","whole egg","pecans","enriched bleached flour","molasses","salt","baking soda","water","whey"] ,
                 "photo":"images/pecanfudge.png",
@@ -63,7 +63,7 @@
             },
             {
                 "name":"Providence Applesauce Cake",
-                "description":"Made with whole wheat flour and real applesauce",
+                "description":"A wholesome and moist dessert that blends the nutty flavor of whole wheat flour with the natural sweetness of applesauce. Infused with the flavors of cinnamon and vanilla, this cake offers a delightful balance of heartiness and subtle sweetness, making it a perfect treat for a comforting, home-baked experience.",
                 "price":"1.00",
                 "ingredients":["apple sauce","whole wheat flour","brown sugar","eggs","vanilla","baking soda","salt","cinnamon"] ,
                 "photo":"images/applesauce.jpg",
