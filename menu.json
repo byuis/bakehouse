@@ -132,7 +132,7 @@
             
             {
                 "name":"Apprentice Loaf",
-                "description":"Authentic recipe, baked on-site in a wood-fired, brick oven by the baker's apprentice. Limited Availability",
+                "description":"An authentically baked sourdough loaf, using a colonial-era recipe; a rustic bread that captures the essence of early American baking traditions. Crafted with a naturally fermented starter, stone-ground whole grain flour, and water, this loaf is baked in a wood-fired brick oven, on-site. The result is a dense, tangy interior with a robust, chewy texture, and a thick, crackling crust, reminiscent of the hearty breads that sustained settlers in the colonial period. Limited Availability",
                 "price":"7.00",
                 "ingredients":["Flour","water","salt"] ,
                 "photo":"images/loaf.webp",
