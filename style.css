@@ -31,7 +31,7 @@ body{
     font-weight: normal;
     }
 
-#form{
+/* #form{
     margin:1rem;
     padding: 0;
     font-size: 2rem;
@@ -122,6 +122,6 @@ select{
  }
 
 #founderName{
-    margin-top: 1rem;
-}
+    margin-top: 1rem; 
+}*/
 

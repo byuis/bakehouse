@@ -3,8 +3,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+       async function init(){
+
+            const response = await fetch("/menu.json");
+            const menu = await response.json();
+            console.log(menu);
+            
+            const html = []
+            
+            for(const section of menu){
+                console.log(section)
+                console.log(section.category)
+                console.log(section.items)
+                
+                
+                html.push(section.category)
+                //html.push(section.items[0].name)
+                html.push("<ul>")
+                for(const item of section.items){
+                    html.push("<li>")
+                        html.push(item.name)
+                        html.push("<br>")
+                        html.push("$"+item.price)
+                        html.push("<br>")
+                        html.push(item.description)
+                    html.push("</li>")
+                }          
+                html.push("</ul>")
+                
+            } 
+
+            console.log("html",html)
+            document.getElementById("canvas").innerHTML = html.join("\n")
+
+        }
+    </script>
 </head>
-<body>
-    
+<body onload="init()">
+    <div id="canvas">
+
+    </div>
 </body>
 </html>
