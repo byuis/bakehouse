@@ -3,6 +3,7 @@
         "category":"Sweets",
         "items":[
             {
+                "id":1,
                 "name":"Joe Frogger",
                 "description":"A Joe Frogger cookie is a traditional New England molasses cookie that is spiced with ginger, cloves, and allspice, and sweetened with a touch of rum flavoring. These large, chewy cookies originated in the 18th century and are named after Joseph Brown, a freed African American who popularized them in Marblehead, Massachusetts.",
                 "price":"4.00",
@@ -12,6 +13,7 @@
                 "display":1
             },
             {
+                "id":2,
                 "name":"*No Empty Bellies* Gingerbread Cookie",
                 "description":"This gingerbread cookie is a delicious, spiced treat combining ginger, cinnamon, and cloves with the rich, floral sweetness of honey. This variation on the classic gingerbread cookie offers a softer texture and a deeper, more complex flavor profile, making it a festival favorite.",
                 "price":"4.00",
@@ -22,6 +24,7 @@
             
             },
             {
+                "id":3,
                 "name":"The Patrick Henry: *Give me liberty or give me death by Chocolate* Chunk Cookie",
                 "description":"A classic and indulgent treat, characterized by its soft and chewy texture with a slightly crisp edge. Generously studded with rich, melty chunks of high-quality chocolate, each bite offers a delightful balance of buttery sweetness and deep cocoa flavor, making it a favorite comfort food for chocolate lovers of all ages.",
                 "price":"3.00",
@@ -32,6 +35,7 @@
 
             },
             {
+                "id":4,
                 "name":"The Lord Dunmore: *Make me Swoon* Chocolate Macaroon",
                 "description":"A decadent treat featuring a moist, tender texture from shredded coconut combined with rich, melted chocolate. This delightful confection balances the tropical sweetness of coconut with the deep, satisfying flavor of chocolate, creating a perfect bite-sized indulgence that's crispy on the outside and irresistibly chewy on the inside.",
                 "price":"2.00",
@@ -42,6 +46,7 @@
 
             },
             {
+                "id":5,
                 "name":"The John Adams: *I will not budge* Pecan Fudge Cookie",
                 "description":"A rich and indulgent treat that combines the deep, velvety flavors of chocolate fudge with the buttery crunch of toasted pecans. Each bite offers a delightful contrast between the soft, chewy cookie base and the nutty, slightly caramelized pecans, creating a decadent and satisfying dessert experience.",
                 "price":"2.00",
@@ -52,6 +57,7 @@
 
             },
             {
+                "id":6,
                 "name":"Variety Pack: The Cooki-E pluribus unum",
                 "description":"One of each of the above cookies. Save $2",
                 "price":"10.00",
@@ -62,6 +68,7 @@
 
             },
             {
+                "id":7,
                 "name":"Providence Applesauce Cake",
                 "description":"A wholesome and moist dessert that blends the nutty flavor of whole wheat flour with the natural sweetness of applesauce. Infused with the flavors of cinnamon and vanilla, this cake offers a delightful balance of heartiness and subtle sweetness, making it a perfect treat for a comforting, home-baked experience.",
                 "price":"1.00",
@@ -72,6 +79,7 @@
 
             },
             {
+                "id":8,
                 "name":"The Crispus Attucks Rice Crispy Bar",
                 "description":"A classic, nostalgic treat made by combining crispy rice cereal with gooey, melted marshmallows and a touch of butter and vanilla. This simple yet irresistible confection boasts a delightful contrast between its crunchy texture and sweet, chewy goodness, making it a favorite for both kids and adults alike. A gluten-friendlier option.",
                 "price":"1.00",
@@ -89,6 +97,7 @@
         "items":[
             
             {
+                "id":9,
                 "name":"a plain slice",
                 "description":"Served with no toppings",
                 "price":"1.00",
@@ -98,6 +107,7 @@
                 "display":1
             },
             {
+                "id":10,
                 "name":"a slice With molasses",
                 "description":"Served with a generous drizzle of molasses",
                 "price":"1.00",
@@ -107,6 +117,7 @@
                 "display":1
             },
             {
+                "id":11,
                 "name":"a slice with butter",
                 "description":"Single slice spread with real butterr",
                 "price":"1.00",
@@ -116,6 +127,7 @@
                 "display":1
             },
             {
+                "id":12,
                 "name":"a slice with butter and molasses",
                 "description":"Single slice with both butter and molasses",
                 "price":"1.00",
@@ -131,6 +143,7 @@
         "items":[
             
             {
+                "id":13,
                 "name":"Whole Loaf",
                 "description":"An authentically baked sourdough loaf, using a colonial-era recipe; a rustic bread that captures the essence of early American baking traditions. Crafted with a naturally fermented starter, stone-ground whole grain flour, and water, this loaf is baked in a wood-fired brick oven, on-site. The result is a dense, tangy interior with a robust, chewy texture, and a thick, crackling crust, reminiscent of the hearty breads that sustained settlers in the colonial period. Limited Availability",
                 "price":"8.00",
@@ -145,6 +158,7 @@
         "items":[
             
             {
+                "id":14,
                 "name":"Lemonade",
                 "description":"Sweet and tangy",
                 "price":"1.00",
@@ -153,7 +167,8 @@
                 "imgWidth":200,
                 "display":1
             },
-      {
+            {
+                "id":15,
                 "name":"Limeade",
                 "description":"Tart and refreshing!",
                 "price":"1.00",

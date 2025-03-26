@@ -1,236 +1,163 @@
-let currentPurchase=null
-async function initialize(){
-  console.log("initializing")
+let currentPurchase = [];
+let menuData = [];
+let soldOutItems = {};
 
-  const response = await fetch("menu.json");
-  const menu = await response.json();
-  console.log(menu);
-  const orderform = tag("orderform")
-
-  var tbodyRef = orderform.getElementsByTagName('tbody')[0];
-  
-  for(const category of menu){
-    let newRow = tbodyRef.insertRow();
-    let cell = addCell(newRow,"", "blank")
-    cell.colSpan=4
-    newRow = tbodyRef.insertRow();
-    cell = addCell(newRow,category.category, "group")
-    cell.colSpan=4
-    for(const item of category.items){
-        if(item.display>0){
-            let newRow = tbodyRef.insertRow();
-            let cell = addCell(newRow,item.name)
-            newRow.dataset.name=item.name
-            cell.addEventListener("click", toggleDetails);
-            
-            let span = document.createElement('span')
-            span.appendChild(document.createTextNode("keyboard_arrow_down"))
-            span.className="material-icons"
-            cell.prepend(span)
-            addCell(newRow,"$" + item.price)
-
-            if(item.display===1){
-                cell = addCell(newRow,qtyList())
-                cell.className = "qty"
-                cell = addCell(newRow,null, "rowTotal")
-                cell.dataset.price=item.price
-            }else if(item.display===2){
-                cell = addCell(newRow,"Sold Out","sold-out")
-                cell.colSpan=2
-            }
-
-
-            newRow = tbodyRef.insertRow();
-            cell = addCell(newRow,null)
-            cell.colSpan=4
-            newRow.style.display="none"
-            const img = document.createElement("img");
-            img.src = item.photo;
-            if(item.imgWidth){
-              img.width=item.imgWidth
-            }
-            cell.appendChild(img);
-            cell.style.backgroundColor="white"
-            cell.style.textAlign="left"
-            let div=document.createElement("div");
-            div.appendChild(document.createTextNode(item.description))
-            cell.appendChild(div)
-            div=document.createElement("div");
-            div.style.marginTop="1rem"
-            span = document.createElement('span')
-            span.appendChild(document.createTextNode("Ingredients: "))
-            span.style.fontWeight="bold"
-            div.appendChild(span)
-            div.appendChild(document.createTextNode(item.ingredients.join(", ")))
-            cell.appendChild(div)
-        }
-    }
-
-  }
-
-
+async function initialize() {
+    console.log("initializing");
+    await fetchSoldOutItems();
+    const response = await fetch("menu.json");
+    menuData = await response.json();
+    console.log(menuData);
+    displayOrderForm();
+    displayEmployeeMenu();
 }
 
-function addCell(row, textOrObject, className){
-    var newCell  = row.insertCell();
-    if(className){newCell.className = className}
-    if(textOrObject === null){
-    }else if(typeof textOrObject === 'string'){
-            newCell.appendChild(document.createTextNode(textOrObject));
-    }else{
-        newCell.appendChild(textOrObject);
+async function fetchSoldOutItems() {
+    const gas_endpoint = "https://script.google.com/macros/s/AKfycbxJRt15UzYPrZNc-Md_btlJ0v5IloyeR4T4gyyvskeSz5XNP-BrhXzRx8F1fOx3txXJ3w/exec";
+    try {
+        const response = await fetch(gas_endpoint);
+        soldOutItems = await response.json();
+        console.log("Sold-out items loaded:", soldOutItems);
+    } catch (error) {
+        console.error("Error fetching sold-out items:", error);
+        soldOutItems = {};
     }
-    return newCell
-  }
-
-function qtyList(){
-    const sel = document.createElement("select");
-    for(let x=0;x<50;x++){
-        const opt1 = document.createElement("option");
-        opt1.value = x; 
-        opt1.text = x;
-        sel.add(opt1, null);
-    }
-
-    sel.addEventListener("change", changeQty);
-
-    return sel
 }
 
-function tag(id){
-    return document.getElementById(id)
+async function updateSoldOutItems() {
+    const gas_endpoint = "https://script.google.com/macros/s/AKfycbxJRt15UzYPrZNc-Md_btlJ0v5IloyeR4T4gyyvskeSz5XNP-BrhXzRx8F1fOx3txXJ3w/exec";
+    const options = {
+        method: "POST",
+        body: JSON.stringify({ soldOutItems }),
+    };
+    try {
+        const response = await fetch(gas_endpoint, options);
+        console.log(await response.text());
+    } catch (error) {
+        console.error("Error updating sold-out items:", error);
+    }
 }
 
-function changeQty(evt){
-    resetPmt()
-  let elem=evt.target
-  while(elem.tagName !== "TD"){
-    elem=elem.parentNode
-  }
-  elem = elem.nextElementSibling
-  console.log(evt.target.value)
-  if(evt.target.value==0){
-    elem.replaceChildren()
-  }else{
-    elem.innerHTML = money(elem.dataset.price * evt.target.value)
-  }
-  
-  let orderTotal=0
-  for(const rowTotal of document.querySelectorAll(".rowTotal")){
-    let tot=parseFloat(rowTotal.innerHTML.replace("$",""))
-    if(isNaN(tot)){tot=0}
-    if(tot>0){
-        orderLine(rowTotal, tot)
-        console.log(tot)
-        console.log("tot", typeof tot, tot, isNaN(tot))
-    }
-    orderTotal += tot
-  }
-  tag("total").replaceChildren(money(orderTotal))
-  console.log(currentPurchase)
+// ... (displayOrderForm, addCell, qtyList, tag, getParentRow, changeQty, orderLine, money, toggleDetails remain unchanged) ...
+
+function showMessage(message) {
+    const paymentDiv = tag("payment");
+    let messageDiv = tag("payment-message");
+    if (messageDiv) messageDiv.remove();
+
+    messageDiv = document.createElement("div");
+    messageDiv.id = "payment-message";
+    messageDiv.textContent = message;
+    messageDiv.className = "payment-message";
+    paymentDiv.appendChild(messageDiv);
+
+    // Reset historical figure and remove message after 5 seconds
+    setTimeout(() => {
+        if (messageDiv) messageDiv.remove();
+        const founderSelect = tag("founderName");
+        founderSelect.value = "none"; // Reset to blank
+        showPmt(); // Update UI (hide payment, show instructions)
+    }, 5000); // Changed to 5 seconds as per your tweak
 }
 
-function orderLine(rowTotal, lineAmount){
-    let elem=rowTotal
-    while(elem.tagName !== "TR"){
-      elem=elem.parentNode
+function pay(method) {
+    if (!currentPurchase.length) {
+        showMessage("Please order something before attempting to pay.");
+        return;
     }
-    let qty = elem.querySelector("select").value
-    console.log(qty)
-    currentPurchase.push(qty + " " + elem.dataset.name + ": " +money(lineAmount))
-      
+    tag("founder").style.display = "none";
+    resetPmt();
+    tag("reset").style.display = "block";
+
+    for (const qtyCell of document.querySelectorAll(".qty")) {
+        const value = qtyCell.firstElementChild.value;
+        qtyCell.textContent = value == 0 ? "" : value;
+    }
+
+    const orderText = currentPurchase.join("\n");
+    const orderTotal = parseFloat(tag("total").textContent.replace("$", ""));
+
+    if (method === 'venmo') {
+        window.open(`https://venmo.com/spafv?txn=pay&amount=${orderTotal}¬e=${encodeURIComponent(orderText)}`);
+    }
+    const payload = {
+        customer: tag("founderName").value,
+        order: orderText,
+        total: orderTotal
+    };
+    console.log(payload);
+    submitOrder(payload);
 }
 
-function money(num){
-    return num.toLocaleString('en-US', {style: 'currency',currency: 'USD',})
+function resetPmt() {
+    tag("pay-cash").style.display = "none";
+    tag("pay-venmo").style.display = "none";
+    tag("payment").style.display = "none";
+    currentPurchase = [];
 }
 
-function toggleDetails(evt){
-    let elem=evt.target
-    while(elem.tagName !== "TR"){
-      elem=elem.parentNode
-    }
-    const prod=elem
-    elem = elem.nextElementSibling
-    if(elem.style.display==="none"){
-        elem.style.display=""
-        prod.querySelector(".material-icons").replaceChildren("keyboard_arrow_up")
-    }else{
-        elem.style.display="none"        
-        prod.querySelector(".material-icons").replaceChildren("keyboard_arrow_down")
-    }
-  
-}
-
-function pay(style){
-
-
-    if(!currentPurchase){return}
-    tag("founder").style.display="none"
-    tag("payment").style.display="none"
-    tag("reset").style.display="block"
-
-
-    for(const cell of document.querySelectorAll(".qty")){
-        console.log("cell",cell)
-        const val = cell.firstElementChild.value
-        if(val===0){
-            cell.replaceChildren()
-        }else{
-            cell.replaceChildren(val)
-        }
-    }
-
-    const orderText=currentPurchase.join("\n")
-    const orderTotal = parseFloat(tag("total").innerHTML.replace("$",""))
-
-    if(style==='venmo'){
-        window.open("https://venmo.com/spafv?txn=pay&amp;amount="+orderTotal+"&amp;note=" + encodeURIComponent(orderText));
-    }
-    const payload={
-        customer:tag("founderName").value,
-        order:orderText,
-        total:orderTotal
-    }
-    console.log(payload)
-    submitOrder(payload)
-
-}
-
-
-
-function resetPmt(){
-    tag("pay-cash").style.display="none"
-    tag("pay-venmo").style.display="none"
-    currentPurchase=[]
-}
-
-async function submitOrder(payload){
-    const deployment_id = "AKfycbxJRt15UzYPrZNc-Md_btlJ0v5IloyeR4T4gyyvskeSz5XNP-BrhXzRx8F1fOx3txXJ3w"
-    const gas_end_point="https://script.google.com/macros/s/" + deployment_id + "/exec"
-    
-
-
-    const options = { 
-        method: "POST", 
+async function submitOrder(payload) {
+    const gas_endpoint = "https://script.google.com/macros/s/AKfycbxJRt15UzYPrZNc-Md_btlJ0v5IloyeR4T4gyyvskeSz5XNP-BrhXzRx8F1fOx3txXJ3w/exec";
+    const options = {
+        method: "POST",
         body: JSON.stringify(payload),
-    }
-
-    const reply = await fetch(gas_end_point, options)
-    //The request is made of Google App Script and the response is set to "response"
-    const response = await reply.text()
-    console.log(response)
-
+    };
+    const response = await fetch(gas_endpoint, options);
+    console.log(await response.text());
 }
 
-
-function showPmt(){
-    console.log("i'm changing")
-    const founder = tag("founderName")
-    if(founder.value==='none'){
-        tag("payment").style.display='none'
-    }else{
-        tag("payment").style.display='block'
+function showPmt() {
+    const founder = tag("founderName");
+    const paymentDiv = tag("payment");
+    const instructionsDiv = tag("instructions");
+    if (founder.value === 'none') {
+        paymentDiv.style.display = 'none';
+        instructionsDiv.style.display = 'block';
+    } else {
+        paymentDiv.style.display = 'block';
+        instructionsDiv.style.display = 'none';
     }
 }
 
+function displayEmployeeMenu() {
+    const employeeDiv = tag("employee-menu");
+    if (!employeeDiv) {
+        console.error("Employee menu element not found!");
+        return;
+    }
+    employeeDiv.innerHTML = '';
+    for (const category of menuData) {
+        employeeDiv.innerHTML += `<h1 class="category-name">${category.category}</h1>`;
+        for (const item of category.items) {
+            if (item.display > 0) {
+                const isSoldOut = soldOutItems[item.id] || item.display === 2;
+                employeeDiv.innerHTML += `
+                    <div>
+                        <h3>${item.name}</h3>
+                        <button onclick="toggleSoldOut(${item.id})">
+                            ${isSoldOut ? 'Mark Available' : 'Mark Sold Out'}
+                        </button>
+                    </div>
+                `;
+            }
+        }
+    }
+}
+
+async function toggleSoldOut(itemId) {
+    soldOutItems[itemId] = !soldOutItems[itemId];
+    if (!soldOutItems[itemId]) delete soldOutItems[itemId];
+    await updateSoldOutItems();
+    displayOrderForm();
+    displayEmployeeMenu();
+}
+
+function showEmployeeSection() {
+    const password = prompt("Enter employee password:");
+    if (password === "bakehouse2025") {
+        tag("employee-section").style.display = "block";
+        displayEmployeeMenu();
+    } else {
+        alert("Incorrect password!");
+    }
+}

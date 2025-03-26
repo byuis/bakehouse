@@ -2,44 +2,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="mystyle.css">
     <script src="code.js"></script>
     <title>Bakehouse</title>
+    <style>
+        /* Minimal inline CSS for functionality */
+        #employee-section {
+            display: none; /* Hidden by default */
+        }
+        .sold-out-text {
+            font-family: Georgia, 'Times New Roman', Times, serif; /* Match your style */
+            font-size: 0.9em;
+            margin-top: 5px;
+            display: block;
+        }
+    </style>
 </head>
 <body onload="initialize()">
   <div id="content">
-    <div id="title">
-        Bakehouse Order Form
-    </div>   
-    <div id="subtitle">
-        Tap an item for more information
-    </div>
+    <h1><div id="title">Ye Olde Bakehouse Order Form</div></h1>   
+    <h2><div id="subtitle">Tap an item name for more information</div></h2>
     <div id="form">
-        <table id="orderform">
-            <tbody>
-            </tbody>
-        </table>
-
-
-        <!--div id="customer">
-            Name on Order: <br>
-            <input id="cust-name" type="text" style="width:100%">
-        </div-->
-    
-        <div id="ordertotal">
-            Order Total: <span id="total">$0</span>
-            </div>
-        </div>
-        <div id="subtitle">
-            See a cashier to complete your order and to receive the name of a historical figure.
-        </div>    
-        <div id="founder">
-            Historical Figure:<br>
-            <select id="founderName" onchange="showPmt()">
-                <option value="none"></option>
-                <option value="Aaron Burr">Aaron Burr</option>
+        <table id="orderform"><tbody></tbody></table>
+        <div id="ordertotal"><h2>Order Total: <span id="total">$0</span></h2></div>
+    </div>
+    <div id="instructions">See a cashier to complete your order and receive assigned historical figure.</div>    
+    <div id="founder">
+        <h3>Cashier Use Only
+            <hr>Historical Figure:</h3><br>
+        <select id="founderName" onchange="showPmt()">
+            <option value="none"></option>               <option value="Aaron Burr">Aaron Burr</option>
                 <option value="Abigail Adams">Abigail Adams</option>
                 <option value="Alexander Hamilton">Alexander Hamilton</option>
                 <option value="Anna Strong">Anna Strong</option>
@@ -113,42 +106,27 @@
                 <option value="William Howe">William Howe</option>
                 <option value="William Penn">William Penn</option>
                 
-                         </select>
+        </select>
         </div>
-
-        <div id="payment" style="display:none">
-
-            <div class="button"  onclick="pay('venmo')">
-                Pay With Venmo
-            </div>
-
-            <div class="button"   onclick="pay('cash')">
-                Pay With Cash
-            </div>
-
+         <div id="payment" style="display:none">
+            <div class="button" onclick="pay('venmo')">Pay With Venmo</div>
+            <div class="button" onclick="pay('cash')">Pay With Cash</div>
             <div id="pay-venmo" class="pay-text" style="display: none;">
-                <span class="warning">Don't make the payment <br>until you are at the counter.</span><br><br> When instructed, follow this link to <a class="span-link" target="venmo" id="venmo-link">open your Venmo app</a> and pay.
+                <span class="warning">Don't make the payment <br>until you are at the counter.</span><br><br>
+                When instructed, follow this link to <a class="span-link" target="venmo" id="venmo-link">open your Venmo app</a> and pay.
             </div>
-            <div id="pay-cash" class="pay-text" style="display: none;">
-                No problem, just have your money ready 
-            </div>
+            <div id="pay-cash" class="pay-text" style="display: none;">No problem, just have your money ready</div>
         </div>
-
-
-
-
         <div id="reset" style="display:none">
-
-            <div class="button"  onclick="window.location.reload()">
-                Reset Order Form
-            </div>
-
+            <div class="button" onclick="window.location.reload()">Reset Order Form</div>
         </div>
-    </div>
-
-
-
-
-
-</body>
-</html>
+        <br><br><br><br><br><br><br>
+        <!-- Employee Management Section -->
+        <button onclick="showEmployeeSection()">Employee Login</button>
+        <div id="employee-section">
+            <div id="subtitle">Mark Items as Sold Out</div>
+            <div id="employee-menu"></div>
+        </div>
+        </div>
+    </body>
+    </html>

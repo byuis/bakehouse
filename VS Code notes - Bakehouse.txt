@@ -1,0 +1,4 @@
+VS Code notes
+
+open bakehouse menu with this in the cmd line
+C:\Users\dezra\code>code bakehouse

@@ -2,47 +2,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script>
-       async function init(){
-
-            const response = await fetch("/menu.json");
-            const menu = await response.json();
-            console.log(menu);
-            
-            const html = []
-            
-            for(const section of menu){
-                console.log(section)
-                console.log(section.category)
-                console.log(section.items)
-                
-                
-                html.push(section.category)
-                //html.push(section.items[0].name)
-                html.push("<ul>")
-                for(const item of section.items){
-                    html.push("<li>")
-                        html.push(item.name)
-                        html.push("<br>")
-                        html.push("$"+item.price)
-                        html.push("<br>")
-                        html.push(item.description)
-                    html.push("</li>")
-                }          
-                html.push("</ul>")
-                
-            } 
-
-            console.log("html",html)
-            document.getElementById("canvas").innerHTML = html.join("\n")
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/mystyle.css">
+    <script src="/code.js"></script>
+    <title>Bakehouse</title>
+    <style>
+        /* Minimal inline CSS for functionality */
+        #employee-section {
+            display: none; /* Hidden by default */
         }
-    </script>
+        .sold-out-text {
+            font-family: Georgia, 'Times New Roman', Times, serif; /* Match your style */
+            font-size: 0.9em;
+            margin-top: 5px;
+            display: block;
+        }
+    </style>
 </head>
-<body onload="init()">
-    <div id="canvas">
-
+<body onload="initialize()">
+  <div id="content">
+    <div id="title">Bakehouse Order Form</div>   
+    <div id="subtitle">Tap an item for more information</div>
+    <div id="form">
+        <table id="orderform"><tbody></tbody></table>
+        <div id="ordertotal">Order Total: <span id="total">$0</span></div>
     </div>
-</body>
-</html>
+    <div id="subtitle">See a cashier to complete your order and to receive the name of a historical figure.</div>    
+    <div id="founder">
+        Historical Figure:<br>
+        <select id="founderName" onchange="showPmt()">
+            <option value="none"></option>               <option value="Aaron Burr">Aaron Burr</option>
+                <option value="Abigail Adams">Abigail Adams</option>
+                <option value="Alexander Hamilton">Alexander Hamilton</option>
+                <option value="Anna Strong">Anna Strong</option>
+                <option value="Anne Bradstreet">Anne Bradstreet</option>
+                <option value="Anne Hutchinson">Anne Hutchinson</option>
+                <option value="Benedict Arnold">Benedict Arnold</option>
+                <option value="Benjamin Franklin">Benjamin Franklin</option>
+                <option value="Benjamin Harrison">Benjamin Harrison</option>
+                <option value="Benjamin Tallmadge">Benjamin Tallmadge</option>
+                <option value="Benjamin Dr. Rush">Benjamin Dr. Rush</option>
+                <option value="Betsy Ross">Betsy Ross</option>
+                <option value="Caesar Rodney">Caesar Rodney</option>
+                <option value="Capt. John Smith">Capt. John Smith</option>
+                <option value="Carter Braxton">Carter Braxton</option>
+                <option value="Crispus Attucks">Crispus Attucks</option>
+                <option value="Deborah Sampson">Deborah Sampson</option>
+                <option value="Elizabeth Timothy">Elizabeth Timothy</option>
+                <option value="Esther De Berdt Reed">Esther De Berdt Reed</option>
+                <option value="George Read">George Read</option>
+                <option value="George Washington">George Washington</option>
+                <option value="George Wythe">George Wythe</option>
+                <option value="Hercules Mulligan">Hercules Mulligan</option>
+                <option value="Isaiah Thomas">Isaiah Thomas</option>
+                <option value="James Armistead Lafayette">James Armistead Lafayette</option>
+                <option value="James Madison">James Madison</option>
+                <option value="James Oglethorpe">James Oglethorpe</option>
+                <option value="James Otis">James Otis</option>
+                <option value="Jean Baptiste Point du Sable">Jean Baptiste Point du Sable</option>
+                <option value="John Adams">John Adams</option>
+                <option value="John André">John André</option>
+                <option value="John Hancock">John Hancock</option>
+                <option value="John Honeyman">John Honeyman</option>
+                <option value="John Jay">John Jay</option>
+                <option value="John Mason">John Mason</option>
+                <option value="John Winthrop">John Winthrop</option>
+                <option value="John Witherspoon">John Witherspoon</option>
+                <option value="King George">King George</option>
+                <option value="Lord Dunmore">Lord Dunmore</option>
+                <option value="Lydia Darragh">Lydia Darragh</option>
+                <option value="Marquis de Lafayette">Marquis de Lafayette</option>
+                <option value="Martha Washington">Martha Washington</option>
+                <option value="Mary Musgrove">Mary Musgrove</option>
+                <option value="Mary Ball Washington">Mary Ball Washington</option>
+                <option value="Mary Katherine Goddard">Mary Katherine Goddard</option>
+                <option value="Mercy Otis Warren">Mercy Otis Warren</option>
+                <option value="Nancy Hart">Nancy Hart</option>
+                <option value="Nathan Hale">Nathan Hale</option>
+                <option value="Patrick Henry">Patrick Henry</option>
+                <option value="Paul Revere">Paul Revere</option>
+                <option value="Peter Stuyvesant">Peter Stuyvesant</option>
+                <option value="Philip Livingston">Philip Livingston</option>
+                <option value="Phillis Wheatley">Phillis Wheatley</option>
+                <option value="Pocahontas ">Pocahontas </option>
+                <option value="Robert Morris">Robert Morris</option>
+                <option value="Robert Townsend">Robert Townsend</option>
+                <option value="Roger Sherman">Roger Sherman</option>
+                <option value="Sacagawea ">Sacagawea </option>
+                <option value="Samuel Adams">Samuel Adams</option>
+                <option value="Samuel Chase">Samuel Chase</option>
+                <option value="Sarah Franklin Bache">Sarah Franklin Bache</option>
+                <option value="Squanto ">Squanto </option>
+                <option value="Stephen Hopkins">Stephen Hopkins</option>
+                <option value="Sybil Ludington">Sybil Ludington</option>
+                <option value="Thomas Gage">Thomas Gage</option>
+                <option value="Thomas Hooker">Thomas Hooker</option>
+                <option value="Thomas Hutchinson">Thomas Hutchinson</option>
+                <option value="Thomas Jefferson">Thomas Jefferson</option>
+                <option value="Venture Smith">Venture Smith</option>
+                <option value="Virginia Dare">Virginia Dare</option>
+                <option value="William Bradford">William Bradford</option>
+                <option value="William Howe">William Howe</option>
+                <option value="William Penn">William Penn</option>
+                
+        </select>
+        </div>
+        <div id="payment" style="display:none">
+            <div class="button" onclick="pay('venmo')">Pay With Venmo</div>
+            <div class="button" onclick="pay('cash')">Pay With Cash</div>
+            <div id="pay-venmo" class="pay-text" style="display: none;">
+                <span class="warning">Don't make the payment <br>until you are at the counter.</span><br><br>
+                When instructed, follow this link to <a class="span-link" target="venmo" id="venmo-link">open your Venmo app</a> and pay.
+            </div>
+            <div id="pay-cash" class="pay-text" style="display: none;">No problem, just have your money ready</div>
+        </div>
+        <div id="reset" style="display:none">
+            <div class="button" onclick="window.location.reload()">Reset Order Form</div>
+        </div>
+        <!-- Employee Management Section -->
+        <button onclick="showEmployeeSection()">Employee Login</button>
+        <div id="employee-section">
+            <div id="subtitle">Mark Items as Sold Out</div>
+            <div id="employee-menu"></div>
+        </div>
+        </div>
+    </body>
+    </html>
